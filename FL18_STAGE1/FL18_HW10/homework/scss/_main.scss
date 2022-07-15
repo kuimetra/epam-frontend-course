@@ -1,0 +1,314 @@
+body {
+  padding: 0;
+  margin: 0;
+  background-color: $themeColor;
+}
+
+@mixin card-link {
+  font-family: $primaryFont;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 18px;
+  color: $contentColor;
+}
+
+@mixin btn-style {
+  background-color: $buttonColor;
+  border-radius: 2px;
+  padding: 9px 31px;
+  font-family: $primaryFont;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 18px;
+  color: $primaryColor;
+  border: none;
+  cursor: pointer;
+}
+
+button {
+  @include btn-style;
+}
+
+%logo-paragraph {
+  font-family: $textFont;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 21px;
+  white-space: pre-line;
+  text-align: center;
+}
+
+%grid-layout {
+  display: grid;
+  grid-template-columns: minmax(60px, 160px) 1fr minmax(60px, 160px);
+}
+
+%highlighter {
+  content: '';
+  position: absolute;
+  display: block;
+  bottom: 0;
+  height: 40px;
+  background-color: $highlightColor;
+  z-index: -1;
+}
+
+@mixin logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  img[alt="logo"] {
+    height: 38px;
+  }
+}
+
+.header-wrap .landing-logo {
+  @include logo;
+
+  p {
+    @extend %logo-paragraph;
+    color: $secondaryColor;
+
+    span {
+      font-size: 8px;
+      line-height: 10px;
+      display: block;
+    }
+  }
+}
+
+.footer-wrap .landing-logo {
+  @include logo;
+
+  p {
+    @extend %logo-paragraph;
+    color: $contentColor;
+
+    span {
+      font-size: 8px;
+      line-height: 10px;
+      display: block;
+    }
+  }
+}
+
+.header {
+  & {
+    background-image: $headerBackground;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    border-bottom-right-radius: 600px 200px;
+    height: 575px;
+    @extend %grid-layout;
+  }
+
+  &-wrap {
+    padding-top: 11px;
+    grid-column: 2 / 3;
+  }
+
+  &_heading {
+    font-family: $primaryFont;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 54px;
+    line-height: 54px;
+    color: $secondaryColor;
+    max-width: 363px;
+    margin-top: 55px;
+    margin-bottom: 44px;
+    position: relative;
+    z-index: 1;
+
+    &::before {
+      @extend %highlighter;
+      width: 227px;
+      left: 0;
+    }
+  }
+
+  &_text {
+    font-family: $textFont;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 18px;
+    color: $secondaryColor;
+    white-space: pre-line;
+    margin-bottom: 46px;
+  }
+
+  &_button {
+    & {
+      margin-right: 117px;
+    }
+
+    + a {
+      font-family: $primaryFont;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 18px;
+      color: $primaryColor;
+    }
+  }
+}
+
+.section {
+  &_text {
+    font-family: $primaryFont;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 40px;
+    color: $secondaryColor;
+    margin: 28px auto;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    max-width: 319px;
+
+    &::before {
+      @extend %highlighter;
+      width: 142px;
+      right: 10px;
+    }
+  }
+
+  &_card {
+    background-color: $contentBackground;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0 auto 20px auto;
+    max-width: 836px;
+    border-radius: 4px;
+
+    @each $alt, $heigth in $images {
+      & img[alt="#{$alt}"] {
+        height: $heigth;
+        width: auto;
+      }
+    }
+
+    &_img {
+      margin: 15px 65px 15px 15px;
+      border-radius: 4px;
+    }
+
+    &_right_container {
+      text-align: center;
+      padding-right: 65px;
+    }
+
+    &_heading {
+      font-family: $primaryFont;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 23px;
+      color: $primaryColor;
+      margin-bottom: 30px;
+    }
+
+    &_text {
+      font-family: $textFont;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 13px;
+      line-height: 18px;
+      color: $contentColor;
+      margin-bottom: 15px;
+      text-align: justify;
+    }
+  }
+
+  &_link {
+    @include card-link;
+  }
+
+  &_banner {
+    & {
+      max-width: 900px;
+      margin: 105px auto -50px;
+      background: linear-gradient(270deg, $gradientColor, $buttonColor);
+      border-radius: 4px;
+      padding: 25px 120px 30px 120px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1;
+    }
+
+    &_heading {
+      font-family: $secondaryFont;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 22px;
+      line-height: 18px;
+      color: $secondaryColor;
+      margin-bottom: 16px;
+      position: relative;
+      z-index: 1;
+      max-width: 309px;
+
+      &::before {
+        @extend %highlighter;
+        width: 47px;
+        left: 91px;
+      }
+    }
+
+    &_text {
+      font-family: $textFont;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 12px;
+      line-height: 18px;
+      color: $contentColor;
+    }
+  }
+}
+
+.footer {
+  & {
+    position: relative;
+    z-index: -1;
+    background-color: $contentBackground;
+    @extend %grid-layout;
+  }
+
+  &-wrap {
+    padding-top: 100px;
+    padding-bottom: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    grid-column: 2 / 3;
+  }
+
+  &_text {
+    font-family: $textFont;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 11px;
+    line-height: 15px;
+    color: $contentColor;
+    max-width: 232px;
+    text-align: justify;
+  }
+
+  &-cr {
+    font-family: $textFont;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    color: $contentColor;
+  }
+}

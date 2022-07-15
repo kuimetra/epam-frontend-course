@@ -1,0 +1,193 @@
+:root {
+    --dark-color: #212121;
+    --dark-gray-color: #303030;
+    --gray-color: #a4a4a4;
+    --dark-purple-color: #5e3794;
+    --dark-pink-color: #991f5b;
+    --purple-color: #8d52de;
+    --pink-color: #e62f89;
+    --light-color: #f6f6f6;
+    --trans-delay: 0.5s;
+}
+
+h1 {
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.calculator,
+.log {
+    background-color: var(--dark-color);
+    padding: 1rem;
+    border-radius: 0.75rem;
+    height: 506px;
+    width: 304px;
+}
+
+.scroll::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+.scroll::-webkit-scrollbar-track {
+    background-color: var(--dark-gray-color);
+    border-radius: 1rem;
+}
+
+.scroll::-webkit-scrollbar-thumb {
+    background-color: var(--light-color);
+    border-radius: 1rem;
+}
+
+.display {
+    display: grid;
+    grid-template-rows: 2.5rem 3rem;
+    padding: 0.35rem;
+    text-align: right;
+}
+
+.display-expression {
+    color: var(--pink-color);
+    overflow-x: auto;
+    overflow-y: hidden;
+    font-size: 1.9rem;
+    white-space: nowrap;
+}
+
+.display-result {
+    color: var(--light-color);
+    overflow-x: auto;
+    overflow-y: hidden;
+    font-size: 2.5rem;
+}
+
+.error {
+    color: var(--pink-color);
+    font-weight: bold;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 3.5rem);
+    grid-template-rows: repeat(5, 3.5rem);
+    grid-gap: 0.4rem;
+}
+
+.calc-btn {
+    border: none;
+    border-radius: 0.35rem;
+    cursor: pointer;
+    font-size: 1.25rem;
+}
+
+.number {
+    background-color: var(--light-color);
+    color: var(--dark-color);
+    transition: var(--trans-delay);
+}
+
+.number:hover {
+    box-shadow: 0 0 0 0.2rem var(--gray-color);
+}
+
+.sign {
+    background-color: var(--purple-color);
+    color: var(--light-color);
+    transition: var(--trans-delay);
+}
+
+.sign:hover {
+    box-shadow: 0 0 0 0.2rem var(--dark-purple-color);
+}
+
+.clear,
+.backspace,
+.equals {
+    background-color: var(--pink-color);
+    color: var(--light-color);
+    transition: var(--trans-delay);
+    font-weight: bold;
+}
+
+.clear:hover,
+.backspace:hover,
+.equals:hover {
+    box-shadow: 0 0 0 0.2rem var(--dark-pink-color);
+}
+
+.backspace,
+.zero,
+.equals {
+    grid-column: span 2;
+}
+
+.log {
+    display: grid;
+    grid-template-rows: 6rem auto;
+}
+
+.log-header {
+    padding: 0.35rem;
+    color: var(--light-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.log-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    overflow-y: auto;
+}
+
+.log-list-item {
+    display: grid;
+    grid-template-columns: 50px 1fr 50px;
+    align-items: center;
+    justify-items: center;
+    margin-bottom: 0.75rem;
+}
+
+.log-item-circle {
+    border: 0.2rem solid var(--pink-color);
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    transition: var(--trans-delay);
+}
+
+.log-item-circle:hover {
+    background-color: var(--pink-color);
+    cursor: pointer;
+}
+
+.fill-circle {
+    background-color: var(--pink-color);
+}
+
+.log-item-expression {
+    color: var(--light-color);
+    width: 204px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.log-item-delete {
+    color: var(--dark-gray-color);
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: var(--trans-delay);
+}
+
+.log-item-delete:hover {
+    color: var(--pink-color);
+}

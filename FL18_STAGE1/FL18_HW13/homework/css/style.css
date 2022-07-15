@@ -1,0 +1,19 @@
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+.text-black {
+    color: #111111;
+}
+
+.bg-coral {
+    background-color: coral;
+}
+
+.bg-gray {
+    background-color: #525252;
+}
+
+.bg-lightcoral {
+    background-color: lightcoral;
+}

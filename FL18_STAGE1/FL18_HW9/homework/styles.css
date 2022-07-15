@@ -1,0 +1,103 @@
+/* START: Task 1 Styles */
+#task1 {
+    margin-bottom: 50px;
+}
+
+table {
+    border: 1px solid black;
+    margin: 0 auto;
+}
+
+td {
+    background-color: white;
+    border: 1px solid black;
+    height: 60px;
+    padding: 20px;
+    width: 60px;
+}
+
+.green-cell {
+    background-color: green;
+}
+
+.blue-cell {
+    background-color: blue;
+}
+
+.yellow-cell {
+    background-color: yellow;
+}
+
+/* END: Task 1 Styles */
+
+/* START: Task 2 Styles */
+#task2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+label[for="phone"] {
+    background-color: slateblue;
+    border: 1px solid black;
+    color: white;
+    display: inline-block;
+    margin-bottom: 15px;
+    padding: 15px 10px;
+    width: calc(100% - 22px);
+}
+
+input[type="tel"] {
+    padding: 10px;
+    width: 400px;
+}
+
+input[type="button"] {
+    padding: 10px 8px;
+}
+
+/* END: Task 2 Styles */
+
+/* START: Task 3 Styles */
+#task3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#basketballCourt {
+    cursor: pointer;
+    position: relative;
+}
+
+#court {
+    height: 330px;
+    position: relative;
+    width: 600px;
+}
+
+#ball {
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.5s all;
+}
+
+#scores {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: center;
+    width: 590px;
+}
+
+#score-notification {
+    font-weight: bold;
+}
+
+/* END: Task 3 Styles */

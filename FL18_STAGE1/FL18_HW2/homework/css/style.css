@@ -1,0 +1,141 @@
+.flex-2-col {
+    display: flex;
+    align-items: center;
+}
+
+.box-bg:hover h2 {
+    color: #FFF;
+    font-weight: bold;
+}
+
+.box-bg:hover {
+    background-color: #87CEFA;
+}
+
+p:not(.tm-banner-text):not(li.box-work p)::first-letter {
+    color: #87CEFA;
+}
+
+p:not(.tm-banner-text)::first-letter {
+    font-size: 30px;
+}
+
+.tm-content-box, .tm-content-header, .tm-main-nav, .blocks {
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(153, 153, 153, .45);
+}
+
+.tm-banner {
+    background-color: whitesmoke;
+    border: 2px solid lightgrey;
+}
+
+.tm-banner-inner {
+    background-color: #FFF;
+}
+
+section {
+    position: relative;
+}
+
+section::before {
+    border-right: solid 255px transparent;
+    border-left: solid 0 transparent;
+    border-top: solid 35px #87CEFA;
+    content: "";
+    position: absolute;
+}
+
+#ideas .tm-section-title {
+    color: gainsboro;
+    letter-spacing: 5px;
+}
+
+h2 + p {
+    font-style: italic;
+}
+
+.tm-team-description-container p.tm-section-description {
+    line-height: 190%;
+    text-indent: 9%;
+}
+
+.heading li > a:visited {
+    text-decoration: underline;
+}
+
+.heading li > a:hover {
+    text-decoration-line: underline;
+    text-decoration-style: double;
+    color: #87CEFA;
+}
+
+.text:after {
+    position: absolute;
+    margin-left: 2px;
+    content: "New";
+    color: red;
+    vertical-align: super;
+    font-size: 70%;
+}
+
+li.box-work {
+    padding: 10px;
+}
+
+.box-work:nth-child(even) {
+    background-color: #F5F5F5;
+}
+
+button.submit-btn {
+    float: right;
+    color: #87CEFA;
+    background-color: #FFF;
+    border: 1px solid #87CEFA;
+    border-radius: 0;
+    padding: 15px 60px;
+    font-size: 22px;
+}
+
+button.submit-btn:hover {
+    float: right;
+    color: #FFF;
+    background-color: #87CEFA;
+    border: 1px solid #87CEFA;
+}
+
+.mandatory-field::after {
+    content: "*";
+    color: red;
+    font-weight: bold;
+}
+
+.tm-nav-item:hover {
+    background-color: #F5F5F5;
+}
+
+@media print {
+    nav, section + section, #about {
+        display: none;
+    }
+
+    .flex-2-col img {
+        width: 300px;
+    }
+
+    h2.tm-section-title {
+        color: blue;
+    }
+
+    section::before {
+        content: none;
+    }
+
+    .tm-banner {
+        border: none;
+    }
+
+    p.tm-banner-text:first-letter {
+        color: #87CEFA;
+        font-size: 30px;
+    }
+}

@@ -1,0 +1,453 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, p {
+    margin: 0;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: minmax(30px, 60px) 1fr minmax(30px, 60px);
+}
+
+.horizontally-center {
+    grid-column: 2 / 3;
+}
+
+#header {
+    background-image: url("../img/apples.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 817px;
+}
+
+.navbar ul, .footer-nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li:not(:first-child) {
+    float: right;
+}
+
+.navbar ul li, .footer-nav ul li {
+    display: inline-block;
+    list-style-type: none;
+}
+
+.navbar ul li a {
+    display: block;
+    padding: 45px 0;
+    text-decoration: none;
+}
+
+.navbar ul > li:not(:first-child) {
+    margin-left: 50px;
+}
+
+.logo {
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 23px;
+    letter-spacing: 0.15em;
+}
+
+.navbar ul *:not(.logo) {
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 23px;
+    color: #FFFFFF;
+}
+
+.navbar ul li a:link,
+.navbar ul li a:visited,
+.navbar ul li a:hover,
+.navbar ul li a:active {
+    color: #FFFFFF;
+}
+
+.header-content {
+    text-align: center;
+}
+
+.header-heading {
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 56px;
+    line-height: 76px;
+    letter-spacing: 0.16em;
+    color: #FFFFFF;
+    margin-top: 180px;
+}
+
+.ampersand-sign {
+    font-size: 100px;
+    line-height: 136px;
+}
+
+.header-text {
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: #FFFFFF;
+    margin-bottom: 190px;
+}
+
+.header-btn {
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: #FFFFFF;
+    background: rgba(0, 0, 0, 0.4);
+    border: 3px solid #FFFFFF;
+    box-sizing: border-box;
+    padding: 18px 90px;
+    cursor: pointer;
+}
+
+#about {
+    background-color: #FFFFFF;
+}
+
+.about-content {
+    display: flex;
+    justify-content: center;
+    column-gap: 204px;
+    margin: 150px 0;
+}
+
+.about-col {
+    flex-basis: 50%;
+}
+
+.about-left-col {
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 34px;
+    color: #000000;
+    max-width: 503px;
+}
+
+.bold-text {
+    font-weight: 600;
+}
+
+.about-right-col {
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: #000000;
+    max-width: 620px;
+}
+
+#articles {
+    background-color: #F3F3F3;
+}
+
+.articles-header {
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 26px;
+    line-height: 35px;
+    color: #000000;
+    margin-top: 160px;
+    margin-bottom: 100px;
+    text-align: center;
+}
+
+.article {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 117px;
+    margin-bottom: 22px;
+}
+
+.article-img img {
+    max-width: 100%;
+    height: auto;
+}
+
+.article-img:after {
+    content: '';
+    position: absolute;
+    height: calc(100% - 5px);
+    width: 100%;
+    box-shadow: inset 1px -3px 85px 17px rgba(0, 0, 0, 0.6);
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.article-img {
+    position: relative;
+}
+
+.likes {
+    position: absolute;
+    top: 22px;
+    right: 22px;
+    background: rgba(0, 0, 0, 0.4);
+    border: 3px solid #FFFFFF;
+    z-index: 2;
+}
+
+.amount-of-likes {
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    color: #FFFFFF;
+    padding: 7px;
+}
+
+.date {
+    position: absolute;
+    bottom: 22px;
+    left: 22px;
+    z-index: 2;
+}
+
+.date-text {
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: #FFFFFF;
+}
+
+.article-text {
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    color: #343638;
+    max-width: 440px;
+}
+
+.subscription {
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    margin-bottom: 60px;
+    margin-top: 60px;
+    padding-right: 28px;
+    padding-left: 28px;
+}
+
+.subscription-title {
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 26px;
+    line-height: 35px;
+    color: #000000;
+    margin-right: 45px;
+}
+
+::-webkit-input-placeholder { /* Edge */
+    font-size: 15px;
+    line-height: 20px;
+    color: #000000;
+}
+
+:-ms-input-placeholder { /* Internet Explorer */
+    font-size: 15px;
+    line-height: 20px;
+    color: #000000;
+}
+
+::placeholder {
+    font-size: 15px;
+    line-height: 20px;
+    color: #000000;
+}
+
+.subscribe-input-container {
+    max-width: 794px;
+    width: 100%;
+    margin-right: 26px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: inline-block;
+}
+
+#subscription-input {
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 20px;
+    width: 100%;
+    color: #000000;
+    border: 1px solid #000000;
+    height: 58px;
+    background-color: #F3F3F3;
+    padding-left: 22px;
+    outline: none;
+}
+
+.subscribe-btn {
+    background-color: #343638;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: #FFFFFF;
+    padding: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 130px;
+    margin-bottom: 120px;
+}
+
+.footer-title {
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+    color: #000000;
+    margin-bottom: 18px;
+}
+
+.footer-text {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: normal;
+    font-size: 16px;
+    color: #A4A4A4;
+    white-space: pre-line;
+}
+
+.first-col .footer-text,
+.fourth-col .footer-text {
+    font-style: normal;
+    line-height: 22px;
+}
+
+.second-col .footer-text {
+    font-style: italic;
+    line-height: 22px;
+}
+
+.tweet-time {
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: #E8E8E8;
+}
+
+.third-col .footer-text {
+    font-style: normal;
+    line-height: 26px;
+}
+
+.newsletter-input-container {
+    max-width: 210px;
+    width: 100%;
+    margin-top: 4px;
+    margin-right: 11px;
+    display: inline-block;
+}
+
+#newsletter-input {
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 20px;
+    width: 100%;
+    color: #000000;
+    border: 1px solid #000000;
+    height: 40px;
+    background-color: #F3F3F3;
+    padding-left: 12px;
+    outline: none;
+}
+
+.newsletter-subscribe-btn {
+    background-color: #343638;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: #FFFFFF;
+    padding: 11px 10px;
+    border: none;
+    cursor: pointer;
+}
+
+#footer-separator {
+    display: block;
+    height: 2px;
+    border: 0;
+    border-top: 2px solid #F0F0F0;
+}
+
+.copyrights-row {
+    display: flex;
+    justify-items: center;
+    justify-content: space-between;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.copyrights {
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: #9E9E9E;
+}
+
+.footer-nav ul li a {
+    display: block;
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: #000000;
+
+}
+
+.footer-nav ul > li:not(:last-child) {
+    margin-right: 22px;
+}

@@ -1,0 +1,143 @@
+@import "./variables.scss";
+
+.game {
+  &-container {
+    font-family: 'Trebuchet MS', sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  &-card {
+    margin: 0 auto;
+    background-color: $primaryColor;
+    border-radius: 1rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    width: 375px;
+    border: 0.25rem solid $secondaryColor;
+  }
+
+  &-rules {
+    &-title {
+      color: $textColor;
+      margin: 0;
+    }
+
+    &-text {
+      color: $textColor;
+      font-weight: lighter;
+    }
+
+    &-para {
+      margin: 0;
+    }
+  }
+
+  &-buttons {
+    position: sticky;
+    top: 0;
+  }
+
+  &-results {
+    &-title {
+      margin: 0;
+      color: $textColor;
+    }
+
+    &-list {
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.7rem;
+    }
+
+    &-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &-label {
+      color: $textColor;
+    }
+
+    &-details {
+      width: 75%;
+      box-sizing: border-box;
+      padding: 0.75rem 0.5rem;
+      border-radius: 0.5rem;
+      font-size: 0.9rem;
+    }
+  }
+}
+
+.hand-gesture {
+  &-buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &-btn {
+    cursor: pointer;
+    background-color: $btnColor;
+    border: none;
+    border-radius: 0.5rem;
+    width: calc(33% - 0.5rem);
+    height: 3.2rem;
+    transition: $transitionDelay;
+    font-size: 1.5rem;
+    background-repeat: no-repeat;
+    background-size: 30px auto;
+    background-position: center;
+  }
+
+  &-btn:hover {
+    box-shadow: $btnHoverBoxShadow;
+  }
+}
+
+.rock-btn {
+  background-image: url("../img/rock.png");
+}
+
+.paper-btn {
+  background-image: url("../img/paper.png");
+}
+
+.scissors-btn {
+  background-image: url("../img/scissors.png");
+}
+
+.reset-btn {
+  cursor: pointer;
+  width: 100%;
+  height: 2.5rem;
+  background-color: $btnColor;
+  border: none;
+  border-radius: 0.5rem;
+  color: $primaryColor;
+  font-weight: bold;
+  transition: $transitionDelay;
+}
+
+.reset-btn:hover {
+  box-shadow: $btnHoverBoxShadow;
+}
+
+.winner-label {
+  font-weight: bold;
+}
+
+.round-details {
+  background-color: $btnColor;
+  color: $primaryColor;
+}
+
+.winner-details {
+  background-color: $secondaryColor;
+  color: $btnColor;
+}

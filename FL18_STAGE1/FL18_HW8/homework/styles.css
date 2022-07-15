@@ -1,0 +1,50 @@
+#header-title, #no-items-message {
+    text-align: center;
+}
+
+#type-of-search, #search-query {
+    align-items: center;
+    column-gap: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+#search-query-select {
+    width: 180px;
+}
+
+#country-table {
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+    width: 85%;
+}
+
+th, td {
+    border: 1px solid #9973BE;
+    text-align: center;
+}
+
+th {
+    background-color: indigo;
+    color: white;
+    padding: 10px;
+}
+
+td {
+    padding: 20px;
+}
+
+tr:nth-child(odd) {
+    background-color: lavender;
+}
+
+tr:hover {
+    background-color: #D3CAEB;
+}
+
+#country-table-head span {
+    color: lavender;
+    cursor: pointer;
+    padding: 5px;
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <title>Tools</title>
+</head>
+<body>
+<div class="game-container">
+    <div class="game-card">
+        <h1 class="game-rules-title">Let's Play!</h1>
+        <div class="game-rules-text">
+            <p class="game-rules-para">Scissors beats a paper</p>
+            <p class="game-rules-para">Paper beats rock</p>
+            <p class="game-rules-para">Rock beats scissors</p>
+            <p class="game-rules-para">And we play up to three wins!</p>
+        </div>
+    </div>
+    <div class="game-card game-buttons">
+        <div class="hand-gesture-buttons">
+            <button class="hand-gesture-btn rock-btn" title="Rock" type="button" value="0"></button>
+            <button class="hand-gesture-btn paper-btn" title="Paper" type="button" value="1"></button>
+            <button class="hand-gesture-btn scissors-btn" title="Scissors" type="button" value="2"></button>
+        </div>
+        <button class="reset-btn" id="resetGame" type="button" value="reset">Reset</button>
+    </div>
+    <div class="game-card">
+        <h2 class="game-results-title">Results</h2>
+        <ul class="game-results-list" id="gameResults"></ul>
+    </div>
+</div>
+</body>
+</html>
